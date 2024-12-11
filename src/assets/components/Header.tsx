@@ -5,7 +5,7 @@ const Header:React.FC = () => {
     return(
 
         <header>
-            <nav>
+            <nav className='bg-white text-center' >
                 <h1>Header</h1>
             </nav>
         </header>
