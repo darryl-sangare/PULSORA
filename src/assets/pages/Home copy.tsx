@@ -11,6 +11,7 @@ const Home:React.FC = () => {
                 <div className='text-center    sm:absolute  sm:bottom-0  ' >
                     <h1 className='text-4xl font-bold ' >PULSORA</h1>
                     <h2 className='text-3xl font-semibold text-blue-900 ' >LOREM</h2>
+                    <h3>hgh kdvljb</h3>
                 </div>
 
             </div>
