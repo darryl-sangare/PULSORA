@@ -12,6 +12,7 @@ const Home:React.FC = () => {
                     <h1 className='text-4xl font-bold ' >PULSORA</h1>
                     <h2 className='text-3xl font-semibold text-blue-900 ' >LOREM</h2>
                     <h3>hgh kdvljb</h3>
+                    <h4>SDFVDVF</h4>
                 </div>
 
             </div>
