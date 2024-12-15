@@ -1,5 +1,6 @@
 import stadiumOne from "../assets/stadium-1.png";
 import playerHome from "../assets/playerhome.png";
+import rightArrow from "../assets/right-arrow.png";
 
 export default function Home() {
   return (
@@ -41,7 +42,7 @@ export default function Home() {
           <div className="w-16 h-16 bg-blue-800 rounded-full absolute right-2 bottom-2">
             <img
               className="w-1/2 mx-auto mt-4 -rotate-45 "
-              src="src/assets/right-arrow.png"
+              src={rightArrow}
               alt=""
             />
           </div>
@@ -54,7 +55,7 @@ export default function Home() {
             <div className="w-16 h-16 bg-blue-800  rounded-full  absolute right-2  bottom-2">
               <img
                 className="w-1/2 mx-auto mt-4 -rotate-45 "
-                src="src/assets/right-arrow.png"
+                src={rightArrow}
                 alt=""
               />
             </div>
@@ -66,7 +67,7 @@ export default function Home() {
             <div className="w-16 h-16 bg-blue-800  rounded-full  absolute right-2  bottom-2">
               <img
                 className="w-1/2 mx-auto mt-4 -rotate-45 "
-                src="src/assets/right-arrow.png"
+                src={rightArrow}
                 alt=""
               />
             </div>
