@@ -1,11 +1,7 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
-interface HeaderProps {
-  title: string;
-}
-
-const Header: React.FC<HeaderProps> = ({ title }) => {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
 
@@ -14,100 +10,114 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
   };
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
         setIsMenuOpen(false);
       }
     };
 
     document.addEventListener("mousedown", handleClickOutside);
+
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
-
-
-
-
   return (
     <>
       <header className="bg-white shadow-md border-b border-gray-200 lg:hidden">
-
         <div className="container mx-auto flex items-center justify-between py-4 px-6">
-
           <div>
             <img
-              src="src/assets/images/pulsoralogo.png"
+              src="src/assets/pulsoralogo.png"
               alt="Logo Pulsora"
               className="w-10 h-11"
             />
           </div>
-          
-          <div className="text-couleurprincipale font-bold text-xl tracking-wide absolute left-1/2 transform -translate-x-1/2">
-            {title}
-          </div>
 
           <button onClick={toggleMenu}>
-            <img src="src/assets/images/menu.png" alt="Menu" className="w-8 h-7" />
+            <img src="src/assets/menu.png" alt="Menu" className="w-8 h-7" />
           </button>
         </div>
-
       </header>
-
-
-
-    {/* Barre nav ordi */}
 
       <header className="hidden lg:flex bg-white shadow-md border-b border-gray-200">
+        <div className="container mx-auto flex items-center justify-between">
+          <ul>
+            <img
+              src="src/assets/pulsora-1.png"
+              alt="Logo Pulsora"
+              className="w-10 h-11"
+            />
+          </ul>
 
-      <div className="container mx-auto flex items-center justify-between">
+          <ul>
+            <Link
+              to="/"
+              className="text-couleurprincipale font-bold text-xl tracking-wide hover:bg-gray-100 rounded"
+            >
+              ACCUEIL
+            </Link>
+          </ul>
 
-        <ul>
-        <img src="src/assets/images/pulsoralogo.png" alt="Logo Pulsora" className="w-10 h-11"/>
-        </ul>
+          <ul>
+            <Link
+              to="/articles"
+              className="text-couleurprincipale font-bold text-xl tracking-wide hover:bg-gray-100 rounded"
+            >
+              ARTICLES
+            </Link>
+          </ul>
 
-        <ul>
-          <Link to="/" className="text-couleurprincipale font-bold text-xl tracking-wide hover:bg-gray-100 rounded">ACCUEIL</Link>
-        </ul>
+          <ul>
+            <Link
+              to="/saison"
+              className="text-couleurprincipale font-bold text-xl tracking-wide hover:bg-gray-100 rounded"
+            >
+              SAISON
+            </Link>
+          </ul>
 
-        <ul>
-        <Link to="/articles" className="text-couleurprincipale font-bold text-xl tracking-wide hover:bg-gray-100 rounded">ARTICLES</Link>
-        </ul>
+          <ul>
+            <Link
+              to="/equipe"
+              className="text-couleurprincipale font-bold text-xl tracking-wide hover:bg-gray-100 rounded"
+            >
+              EQUIPE
+            </Link>
+          </ul>
 
-        <ul>
-        <Link to="/saison" className="text-couleurprincipale font-bold text-xl tracking-wide hover:bg-gray-100 rounded">SAISON</Link>
-        </ul>
+          <ul>
+            <Link
+              to="/contact"
+              className="text-couleurprincipale font-bold text-xl tracking-wide hover:bg-gray-100 rounded"
+            >
+              CONTACT
+            </Link>
+          </ul>
 
-        <ul>
-        <Link to="/equipe" className="text-couleurprincipale font-bold text-xl tracking-wide hover:bg-gray-100 rounded">EQUIPE</Link>
-        </ul>
-
-        <ul>
-        <Link to="/contact" className="text-couleurprincipale font-bold text-xl tracking-wide hover:bg-gray-100 rounded">CONTACT</Link>
-        </ul>
-
-        <ul>
-        <Link to="/compte" className="text-couleurprincipale font-bold text-xl tracking-wide px-4 py-2 rounded"><img src="src/assets/images/user.png" alt="Logo User" className="w-8 h8"/></Link>
-        </ul>
-
-      </div>
-
+          <ul>
+            <Link
+              to="/compte"
+              className="text-couleurprincipale font-bold text-xl tracking-wide px-4 py-2 rounded"
+            >
+              <img
+                src="src/assets/user.png"
+                alt="Logo User"
+                className="w-8 h8"
+              />
+            </Link>
+          </ul>
+        </div>
       </header>
-
-    
-
-    {/* Barre nav tel */}
 
       {isMenuOpen && (
         <div
           ref={menuRef}
           className="absolute right-0 top-[6.5rem] w-64 bg-white border-l border-gray-200 shadow-lg z-50"
         >
-          <div className="flex flex-col justify-between h-[calc(100vh-6rem)]" >
+          <div className="flex flex-col justify-between h-[calc(100vh-6rem)]">
             <ul className="py-6 px-4 text-right space-y-2">
-
-
               <li className="text-couleurprincipale font-bold text-xl tracking-wide hover:bg-gray-100 px-2 py-1 rounded cursor-pointer">
                 <Link to="/">ACCUEIL</Link>
               </li>
@@ -144,14 +154,6 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
           </div>
         </div>
       )}
-
-
-
-
-
-
     </>
   );
-};
-
-export default Header;
+}
