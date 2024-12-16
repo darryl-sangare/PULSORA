@@ -17,7 +17,7 @@ export default function Saison() {
             <div className="flex justify-center relative">
               <div className="absolute left-0">salut</div>
               <div>score</div>
-              <div className="absolute right-0">salut</div>
+              <div className="absolute right-0">saluuut</div>
             </div>
           </div>
         </div>
