@@ -6,7 +6,6 @@ import Header from './assets/components/Header';
 import Home from './assets/pages/Home';
 import Articles from './assets/pages/Articles';
 import Footer from './assets/components/Footer';
-import Saison from './assets/pages/Saison';
 
 
 const App:React.FC = () => {
@@ -34,7 +33,7 @@ const App:React.FC = () => {
           element={
             <>
               <Header title="SAISON" />
-              <div><Saison/></div>
+              <div>Détails de la saison</div>
             </>
           }
         />
@@ -72,7 +71,4 @@ const App:React.FC = () => {
 
     </>
   );
-
-};
-
-export default App
+}
