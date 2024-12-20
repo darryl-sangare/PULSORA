@@ -51,7 +51,7 @@ export default function Header() {
           <ul>
             <Link
               to="/"
-              className="text-couleurprincipale font-bold text-xl tracking-wide hover:bg-gray-100 rounded"
+              className="text-couleurprincipale font-bold text-lg tracking-wide hover:bg-gray-100 rounded"
             >
               ACCUEIL
             </Link>
@@ -59,8 +59,17 @@ export default function Header() {
 
           <ul>
             <Link
+              to="creer"
+              className="text-couleurprincipale font-bold text-lg tracking-wide hover:bg-gray-100 rounded uppercase"
+            >
+              Créer
+            </Link>
+          </ul>
+
+          <ul>
+            <Link
               to="/articles"
-              className="text-couleurprincipale font-bold text-xl tracking-wide hover:bg-gray-100 rounded"
+              className="text-couleurprincipale font-bold text-lg tracking-wide hover:bg-gray-100 rounded"
             >
               ARTICLES
             </Link>
@@ -69,7 +78,7 @@ export default function Header() {
           <ul>
             <Link
               to="/saison"
-              className="text-couleurprincipale font-bold text-xl tracking-wide hover:bg-gray-100 rounded"
+              className="text-couleurprincipale font-bold text-lg tracking-wide hover:bg-gray-100 rounded"
             >
               SAISON
             </Link>
@@ -78,7 +87,7 @@ export default function Header() {
           <ul>
             <Link
               to="/equipe"
-              className="text-couleurprincipale font-bold text-xl tracking-wide hover:bg-gray-100 rounded"
+              className="text-couleurprincipale font-bold text-lg tracking-wide hover:bg-gray-100 rounded"
             >
               EQUIPE
             </Link>
@@ -87,7 +96,7 @@ export default function Header() {
           <ul>
             <Link
               to="/contact"
-              className="text-couleurprincipale font-bold text-xl tracking-wide hover:bg-gray-100 rounded"
+              className="text-couleurprincipale font-bold text-lg tracking-wide hover:bg-gray-100 rounded"
             >
               CONTACT
             </Link>
@@ -96,7 +105,7 @@ export default function Header() {
           <ul>
             <Link
               to="/compte"
-              className="text-couleurprincipale font-bold text-xl tracking-wide px-4 py-2 rounded"
+              className="text-couleurprincipale font-bold text-lg tracking-wide px-4 py-2 rounded"
             >
               <img src={userIcon} alt="Logo User" className="w-8 h8" />
             </Link>
