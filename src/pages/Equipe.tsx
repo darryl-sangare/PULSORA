@@ -59,7 +59,7 @@ export default function Equipe() {
                       • {team.name}
                     </div>
                     <div className="text-gray-400 font-medium ">
-                      Victoirs : {team.wins} - Défaites : {team.loses}
+                      Victoires : {team.wins} - Défaites : {team.loses}
                     </div>
                   </div>
                 </div>
