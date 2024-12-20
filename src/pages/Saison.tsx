@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { PlayerInterface, TeamInterface } from "./Equipe";
-// import dateFormat from "dateformat";
+import { Link } from "react-router-dom";
 
 export interface GameInterface {
   id: number;
@@ -56,6 +56,10 @@ export default function Saison() {
       <div className="mt-8">
         <div className="text-center text-2xl text-blue-900 mb-8">
           SAISON ACTUELLE
+          <br />
+          <Link to="/generer-match">
+            <button>Générer un match</button>
+          </Link>
         </div>
 
         {gamesData &&

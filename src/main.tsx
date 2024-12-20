@@ -8,6 +8,7 @@ import Articles from "./pages/Articles";
 import Saison from "./pages/Saison";
 import Equipe from "./pages/Equipe";
 import Contact from "./pages/Contact";
+import GenerateGame from "./pages/GenerateGame";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />,
+      },
+      {
+        path: "generer-match",
+        element: <GenerateGame />,
       },
     ],
   },
