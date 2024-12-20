@@ -113,9 +113,25 @@ export default function Saison() {
                       </div>
                     </div>
                     <div className="w-1/3  p-6 flex justify-center  space-x-8 my-10">
-                      <div>{game.homeScore}</div>
+                      <div
+                        className={`${
+                          game.homeScore > game.awayScore
+                            ? "text-green-500"
+                            : "text-red-500"
+                        } font-xl font-bold`}
+                      >
+                        {game.homeScore}
+                      </div>
                       <div>:</div>
-                      <div>{game.awayScore}</div>
+                      <div
+                        className={`${
+                          game.awayScore > game.homeScore
+                            ? "text-green-500"
+                            : "text-red-500"
+                        } font-xl font-bold`}
+                      >
+                        {game.awayScore}
+                      </div>
                     </div>
                     <div className="w-1/3 p-6">
                       <div className="flex items-center justify-center ">
