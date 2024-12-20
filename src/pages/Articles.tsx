@@ -46,7 +46,7 @@ export default function Articles() {
           <>
             {user.articles.map((article) => (
               <div>
-                <div className="flex justify-center pt-10">
+                <div className="flex justify-center mt-8 mb-8">
                   <div className=" text-center relative  bg-white border-2 border-gray-100 rounded-t-xl  w-3/6 py-3  ">
                     <div
                       key={user.id}

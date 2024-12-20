@@ -62,7 +62,7 @@ export default function Saison() {
           gamesData.map((game) => (
             <>
               <div>
-                <div key={game.id} className="flex justify-center ">
+                <div key={game.id} className="flex justify-center mt-8 mb-8">
                   <div className="text-center relative bg-white border-2 border-gray-100 rounded-t-xl  w-3/6 py-3">
                     <div className="absolute left-10 bg-green-400 px-2  py-0.5 rounded-md">
                       • Terminé
