@@ -9,10 +9,10 @@ import Saison from "./pages/Saison";
 import Equipe from "./pages/Equipe";
 import Contact from "./pages/Contact";
 import GenerateGame from "./pages/GenerateGame";
-import Creer from "./pages/Creer";
-import CreerArticle from "./pages/CreerArticle";
-import CreerJoueur from "./pages/CreerJoueur";
-import CreerEquipe from "./pages/CreerEquipe";
+import Gerer from "./pages/Gerer";
+import GererJoueur from "./pages/GererJoueur";
+import GererArticle from "./pages/GererArticle";
+import GererEquipe from "./pages/GererEquipe";
 
 const router = createBrowserRouter([
   {
@@ -44,20 +44,20 @@ const router = createBrowserRouter([
         element: <GenerateGame />,
       },
       {
-        path: "creer/",
-        element: <Creer />,
+        path: "gerer/",
+        element: <Gerer />,
         children: [
           {
             path: "article",
-            element: <CreerArticle />,
+            element: <GererArticle />,
           },
           {
             path: "joueur",
-            element: <CreerJoueur />,
+            element: <GererJoueur />,
           },
           {
             path: "equipe",
-            element: <CreerEquipe />,
+            element: <GererEquipe />,
           },
         ],
       },

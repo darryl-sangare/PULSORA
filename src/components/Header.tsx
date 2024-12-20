@@ -59,10 +59,10 @@ export default function Header() {
 
           <ul>
             <Link
-              to="creer"
+              to="gerer"
               className="text-couleurprincipale font-bold text-lg tracking-wide hover:bg-gray-100 rounded uppercase"
             >
-              Créer
+              Gérer
             </Link>
           </ul>
 
