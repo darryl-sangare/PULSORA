@@ -5,9 +5,9 @@ export default function Gerer() {
     <>
       <div>
         <ul>
-          <Link to="/gerer/article">Poster un article</Link>
-          <Link to="/gerer/equipe">Créer une équipe</Link>
-          <Link to="/gerer/joueur">Créer un joueur</Link>
+          <Link to="/gerer/article">Gestion des articles</Link>
+          <Link to="/gerer/equipe">Gestion des équipes</Link>
+          <Link to="/gerer/joueur">Gestion des joueurs</Link>
           <Outlet />
         </ul>
       </div>

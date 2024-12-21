@@ -21,7 +21,7 @@ export interface PlayerInterface {
   position: Position;
   status: Status;
   teamId: number;
-  incidents: [];
+  incidents: { id: number; type: string }[];
 }
 
 export default function Equipe() {
